@@ -10,11 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table//(name="CourseDetails")
-//@NamedQueries(value = {
-//@NamedQuery(name="find_All",query = "select c from Course c"),
-//@NamedQuery(name="find_all_jpa",query = "select c from Course c where name like 'JPA%'")
-//        })
+@Table
+//(name="CourseDetails")
+@NamedQueries(value = {
+@NamedQuery(name="find_All",query = "select c from Course c"),
+@NamedQuery(name="find_all_jpa",query = "select c from Course c where name like 'JPA%'")
+        })
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
